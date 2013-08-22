@@ -40,7 +40,8 @@ var assertFileExists = function(infile) {
 };
 
 var assertURLExists = function(url) {
-    return true;
+    return rest.get(url)
+        .on('complete', function (data, request) {
 };
 
 var cheerioHtmlFile = function(htmlfile) {
